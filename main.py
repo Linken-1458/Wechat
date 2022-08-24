@@ -8,12 +8,23 @@ import sys
 import os
 
 
-def get_color():
+# def get_color():
+    # 获取随机颜色
+#    get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
+#    color_list = get_colors(100)
+#    return random.choice(color_list)
+
+def get_color(blue_color, red_color,gray_color,green_color):
     # 获取随机颜色
     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
     color_list = get_colors(100)
-    return random.choice(color_list)
+    blue_color = '#6495ED'
+    red_color = '#FF69B4'
+    gray_color = '#778899'
+    green_color = '#00FA9A'
 
+    return blue_color,red_color,gray_color,green_color
+#   return random.choice(color_list)
 
 def get_access_token():
     # appId
@@ -139,35 +150,35 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         "data": {
             "date": {
                 "value": "{} {}".format(today, week),
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "city": {
                 "value": city_name,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "weather": {
                 "value": weather,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "min_temperature": {
                 "value": min_temperature,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "max_temperature": {
                 "value": max_temperature,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "love_day": {
                 "value": love_days,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "note_en": {
                 "value": note_en,
-                "color": get_color()
+                "color": get_color(blue_color)
             },
             "note_ch": {
                 "value": note_ch,
-                "color": get_color()
+                "color": get_color(blue_color)
             }
         }
     }
