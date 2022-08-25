@@ -26,7 +26,7 @@ def blue_color():
 
 
 def LightYellow_color():
-    LightYellow_color = '#FFFFE0'
+    LightYellow_color = '#DAA520'
     return LightYellow_color
 
 
@@ -40,12 +40,12 @@ def pink_color():
     return pink_color
 
 def gray_color():
-    gray_color = '#778899'
+    gray_color = '#2F4F4F'
     return gray_color
 
 
 def green_color():
-    green_color = '#00FA9A'
+    green_color = '	#2E8B57'
     return green_color
 
 
@@ -173,7 +173,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         "data": {
             "date": {
                 "value": "{} {}".format(today, week),
-                "color": gray_color()
+                "color": green_color()
             },
             "city": {
                 "value": city_name,
@@ -213,7 +213,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         else:
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
-        data["data"][key] = {"value": birthday_data, "color": blue_color()}
+        data["data"][key] = {"value": birthday_data, "color": pink_color()}
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
