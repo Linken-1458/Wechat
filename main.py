@@ -26,9 +26,13 @@ def blue_color():
 
 
 def red_color():
-    red_color = '#FF69B4'
+    red_color = '#DC143C'
     return red_color
 
+
+def pink_color():
+    pink_color = '#FF69B4'
+    return pink_color
 
 def gray_color():
     gray_color = '#778899'
@@ -164,7 +168,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         "data": {
             "date": {
                 "value": "{} {}".format(today, week),
-                "color": blue_color()
+                "color": gray_color()
             },
             "city": {
                 "value": city_name,
@@ -172,7 +176,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             },
             "weather": {
                 "value": weather,
-                "color": blue_color()
+                "color": gray_color()
             },
             "min_temperature": {
                 "value": min_temperature,
@@ -180,11 +184,11 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             },
             "max_temperature": {
                 "value": max_temperature,
-                "color": blue_color()
+                "color": red_color()
             },
             "love_day": {
                 "value": love_days,
-                "color": blue_color()
+                "color": pink_color()
             },
             "note_en": {
                 "value": note_en,
@@ -204,7 +208,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         else:
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
-        data["data"][key] = {"value": birthday_data, "color": get_color()}
+        data["data"][key] = {"value": birthday_data, "color": pink_color()}
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
