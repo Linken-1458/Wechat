@@ -40,12 +40,12 @@ def pink_color():
     return pink_color
 
 def gray_color():
-    gray_color = '#2F4F4F'
+    gray_color = '#FF8C00'
     return gray_color
 
 
 def green_color():
-    green_color = '	#2E8B57'
+    green_color = '#00FF7F'
     return green_color
 
 
