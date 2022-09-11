@@ -8,17 +8,17 @@ import sys
 import os
 
 
-# def get_color():
-    # 获取随机颜色
-#    get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
-#    color_list = get_colors(100)
-#    return random.choice(color_list)
-
 def get_color():
     # 获取随机颜色
     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
     color_list = get_colors(100)
     return random.choice(color_list)
+
+
+def color(index):
+    color_list=['#6495ED','#DAA520']
+    return color_list[index]
+
 
 def blue_color():
     blue_color = '#6495ED'
@@ -181,7 +181,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             },
             "weather": {
                 "value": weather,
-                "color": gray_color()
+                "color": color(0)
             },
             "min_temperature": {
                 "value": min_temperature,
